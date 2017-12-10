@@ -1,0 +1,59 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    An effect unit widget.
+  Variables:
+    group: The group for the controls.
+-->
+<Template>           [EffectRack1                                         _EffectUnitN                            _EffectM]
+  <SetVariable name="EffectGroup">[EffectRack<Variable name="EffectRack"/>_EffectUnit<Variable name="EffectUnit"/>_Effect<Variable name="Effect"/>]</SetVariable>
+    <WidgetGroup>
+    <ObjectName>FxToggleSelector</ObjectName>
+    <Layout>horizontal</Layout>
+    <SizePolicy>min,min</SizePolicy>
+    <Children>
+      <!-- invisible, clickable Overlay to toggle Effect -->
+
+      <Template src="skin:left_display_2state_button.xml">
+        <SetVariable name="TooltipId">EffectSlot_enabled</SetVariable>
+        <SetVariable name="ObjectName">FxToggleButton</SetVariable>
+        <SetVariable name="Size">72f,20f</SetVariable>
+        <SetVariable name="left_connection_control"><Variable name="EffectGroup"/>,enabled</SetVariable>
+	<SetVariable name="state_0_text">OFF</SetVariable>
+	<SetVariable name="state_1_text">ON</SetVariable>
+      </Template>
+
+      <WidgetGroup>
+        <ObjectName>FxNameContainer</ObjectName>
+        <Size>72f,20f</Size>
+        <Layout>horizontal</Layout>
+        <Children>
+          <WidgetGroup><Size>0me,1min</Size></WidgetGroup>
+          <EffectName>
+            <ObjectName>FxName</ObjectName>
+            <EffectRack><Variable name="EffectRack"/></EffectRack>
+            <EffectUnit><Variable name="EffectUnit"/></EffectUnit>
+            <Effect><Variable name="Effect"/></Effect>
+          </EffectName>
+          <WidgetGroup><Size>0me,1min</Size></WidgetGroup>
+        </Children>
+      </WidgetGroup>
+
+       <!-- Colored background to communicate the Effect's ON/OFF status -->
+      <Template src="skin:left_display_2state_button.xml">
+        <SetVariable name="ObjectName">FxToggleButtonUnderlay</SetVariable>
+        <SetVariable name="Size">72f,20f</SetVariable>
+        <SetVariable name="ConfigKey"><Variable name="EffectGroup"/>,enabled</SetVariable>
+      </Template>
+
+      <EffectSelector>
+        <Size>82f,20f</Size>
+        <EffectRack><Variable name="EffectRack"/></EffectRack>
+        <EffectUnit><Variable name="EffectUnit"/></EffectUnit>
+        <Effect><Variable name="Effect"/></Effect>
+      </EffectSelector>
+
+    </Children>
+  </WidgetGroup>
+  
+</Template>

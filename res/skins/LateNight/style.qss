@@ -363,10 +363,11 @@
   font: bold 10px/12px;
   text-transform: uppercase;
   color: #585858;
-  text-align: center;
-  qproperty-alignment: 'AlignCenter | AlignBottom';
+  text-align: left;
+  qproperty-alignment: 'AlignLeft | AlignBottom';
   padding-bottom: 1px;
   padding-top: -3px;
+  text-overflow: ellipsis;
 }
 
 #SyncControls {
@@ -1013,20 +1014,11 @@
   text-align: left;
 }
 
-#EffectUnitNameRow {
-  border-bottom: 1px solid #585858;
-  background-color: transparent;
-  margin: 0px;
-}
-
-#EffectUnit1, #EffectUnit2, #EffectUnit3, #EffectUnit4 {
+#EffectUnit {
   qproperty-layoutAlignment: 'AlignTop';
   border: 1px solid #585858;
-  border-left:none;
-}
-
-#EffectUnit1 {
-  border-left: 1px solid #585858;
+  background-color: transparent;
+  margin: 0px;
 }
 
 #EffectUnitNameContainer {
@@ -1331,4 +1323,8 @@ QTreeView::branch:open:has-children:has-siblings:selected { border-image: none; 
 QTreeView::item:selected {
   background-color:qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #585858, stop:1 #0f0f0f);
   color: #cfb32c;
+}
+
+#FxToggleButton {
+  color: #ff0000;
 }

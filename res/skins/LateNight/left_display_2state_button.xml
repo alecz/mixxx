@@ -12,11 +12,11 @@
 -->
 <Template>
   <PushButton>
-    <Size>44max,1me</Size>
+    <Size>44max,20me</Size>
     <ObjectName><Variable name="ObjectName"/></ObjectName>
     <!-- <MinimumSize><Variable name="MinimumSize"/></MinimumSize>
-    <MaximumSize><Variable name="MaximumSize"/></MaximumSize>
-    <SizePolicy><Variable name="SizePolicy"/></SizePolicy> -->
+    <MaximumSize><Variable name="MaximumSize"/></MaximumSize> -->
+    <SizePolicy><Variable name="SizePolicy"/></SizePolicy> 
     <NumberStates>2</NumberStates>
     <State>
       <Number>0</Number>

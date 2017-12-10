@@ -29,15 +29,6 @@
                 <SetVariable name="EffectUnit">2</SetVariable>
               </Template>
 
-              <Template src="skin:effect_unit.xml">
-                <SetVariable name="EffectRack">1</SetVariable>
-                <SetVariable name="EffectUnit">3</SetVariable>
-              </Template>
-
-              <Template src="skin:effect_unit.xml">
-                <SetVariable name="EffectRack">1</SetVariable>
-                <SetVariable name="EffectUnit">4</SetVariable>
-              </Template>
               </Children>
             </WidgetGroup>
           </Children>

@@ -10,34 +10,27 @@
 -->
 <Template>
   <WidgetGroup>
-    <Layout>vertical</Layout>
+    <Layout>horizontal</Layout>
     <Children>
-      <WidgetGroup>
-        <Layout>horizontal</Layout>
-        <SizePolicy>min,min</SizePolicy>
-        <ObjectName>EffectKnob</ObjectName>
-        <MinimumSize>0,50</MinimumSize>
-        <Children>
-          <EffectParameterKnobComposed>
-            <Size>40f,34f</Size>
-            <Knob>knob_indicator.svg</Knob>
-            <BackPath>knob_bg.svg</BackPath>
-            <MinAngle>-135</MinAngle>
-            <MaxAngle>135</MaxAngle>
-            <Connection>
-              <ConfigKey>[EffectRack<Variable name="EffectRack"/>_EffectUnit<Variable name="EffectUnit"/>_Effect<Variable name="Effect"/>],parameter<Variable name="EffectParameter"/></ConfigKey>
-            </Connection>
-          </EffectParameterKnobComposed>
-        </Children>
-      </WidgetGroup>
+
+      <EffectParameterKnobComposed>
+	<Size>40f,34f</Size>
+	<Knob>knob_indicator.svg</Knob>
+	<BackPath>knob_bg.svg</BackPath>
+	<MinAngle>-135</MinAngle>
+	<MaxAngle>135</MaxAngle>
+	<Connection>
+	  <ConfigKey>[EffectRack<Variable name="EffectRack"/>_EffectUnit<Variable name="EffectUnit"/>_Effect<Variable name="Effect"/>],parameter<Variable name="EffectParameter"/></ConfigKey>
+	</Connection>
+      </EffectParameterKnobComposed>
       <EffectParameterName>
-        <Size>1me,18f</Size>
+        <Size>60f,18f</Size>
         <ObjectName>KnobLabel</ObjectName>
         <EffectRack><Variable name="EffectRack"/></EffectRack>
         <EffectUnit><Variable name="EffectUnit"/></EffectUnit>
         <Effect><Variable name="Effect"/></Effect>
         <EffectParameter><Variable name="EffectParameter"/></EffectParameter>
-        <Alignment>center</Alignment>
+        <Alignment>right</Alignment>
       </EffectParameterName>
     </Children>
     <Connection>

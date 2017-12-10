@@ -1,0 +1,59 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    An effect unit widget.
+  Variables:
+    group: The group for the controls.
+-->
+<Template>
+  <SetVariable name="group">[EffectRack<Variable name="EffectRack"/>_EffectUnit<Variable name="EffectUnit"/>_Effect<Variable name="Effect"/>]</SetVariable>
+  <WidgetGroup>
+    <ObjectName>EffectUnitControlRow</ObjectName>
+    <Layout>horizontal</Layout>
+    <SizePolicy>me,min</SizePolicy>
+    <Children>
+
+      <WidgetGroup>
+        <ObjectName>EffectUnitParameters</ObjectName>
+        <SizePolicy>me,max</SizePolicy>
+        <Layout>horizontal</Layout>
+        <Children>
+          <WidgetGroup>
+            <SizePolicy>max,min</SizePolicy>
+            <Layout>horizontal</Layout>
+            <ObjectName>EffectKnobContainer</ObjectName>
+            <Children>
+              <Template src="skin:effect_parameter_knob.xml">
+                <SetVariable name="Effect"><Variable name="Effect"/></SetVariable>
+                <SetVariable name="EffectParameter">1</SetVariable>
+              </Template>
+              <Template src="skin:effect_parameter_knob.xml">
+                <SetVariable name="Effect"><Variable name="Effect"/></SetVariable>
+                <SetVariable name="EffectParameter">2</SetVariable>
+              </Template>
+              <Template src="skin:effect_parameter_knob.xml">
+                <SetVariable name="Effect"><Variable name="Effect"/></SetVariable>
+                <SetVariable name="EffectParameter">3</SetVariable>
+              </Template>
+              <Template src="skin:effect_parameter_knob.xml">
+                <SetVariable name="Effect"><Variable name="Effect"/></SetVariable>
+                <SetVariable name="EffectParameter">4</SetVariable>
+              </Template>
+            </Children>
+          </WidgetGroup>
+        </Children>
+      </WidgetGroup>
+
+      <Template src="skin:effect_toggle_selector.xml">
+        <SetVariable name="EffectRack">1</SetVariable>
+        <SetVariable name="EffectUnit"><Variable name="EffectUnit"/></SetVariable>
+        <SetVariable name="Effect"><Variable name="Effect"/></SetVariable>
+      </Template>
+      
+      <Template src="skin:knob.xml">
+        <SetVariable name="control">meta</SetVariable>
+        <SetVariable name="tooltip">EffectSlot_metaknob</SetVariable>
+      </Template>
+    </Children>
+  </WidgetGroup>
+</Template>
